@@ -36,6 +36,13 @@ $(function() {
 
 	$(".video-content").click(vid_play_pause);
 
+	// $(window).scroll(function() {
+	// 	var wScroll = $(this).scrollTop();
+	// 	$('.header-descr').css({
+	// 		"transform" : "translate(0px, " + wScroll/25 + "%)"
+	// 	});
+	// });
+
 });
 
 $(window).load(function(){
