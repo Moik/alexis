@@ -7,6 +7,15 @@ $(function() {
 		e.preventDefault();
 	});
 
+	$('.main-menu ul li').on('click', function(e) {
+    	var wid = $(window).width();
+    	if(wid < 992) {
+        	e.preventDefault();
+        	$(".toggle-menu").toggleClass('on');
+			$(this).parent().slideToggle();
+		}
+    });
+
 	$(window).resize(function(){
 		var wid = $(window).width();
 		if(wid > 991 && $('.main-menu ul').is(':hidden')) {
