@@ -100,6 +100,9 @@ $(function() {
 					$('#why-sect .why-item').eq(i).addClass('on');
 				}, 200 * (i + 1));
 			});
+			$('.to-top').addClass('on');
+		} else {
+			$('.to-top').removeClass('on');
 		}
 
 		if(wScroll > $('.facts').offset().top - ($(window).height() * 0.5)) {
@@ -109,6 +112,11 @@ $(function() {
 		if(wScroll > $('.subscribe').offset().top - ($(window).height() * 0.6)) {
 			$('.subscribe .input-wrap').addClass('on');
 		}
+
+	});
+
+	$(".to-top").click(function() {
+		$("html, body").animate({ scrollTop: 0 }, "easeInOutQuart");
 	});
 
 });
